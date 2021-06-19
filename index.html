@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>COLORS</title>
+       
+        <link rel="stylesheet" href="css/index.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script type="text/javascript" src="javascript/models/color.js"></script>
+        <script type="text/javascript" src="javascript/models/feeling.js"></script>
+        <script type="text/javascript" src="javascript/services/API.js"></script>
+        <script type="text/javascript" src="javascript/index.js"></script>
+
+    </head>
+
+    <body>
+        <!--TITLE-->
+        <h1  id="title" style="text-align:center"> COLOR YOUR FEELINGS</h1>
+
+        <!--//FORM -->
+        <div class="container">
+            <form class="add-color">
+              
+            <h4>How Are You Feeling?</h4>
+            <input
+            type="text"
+            name="feeling"
+            value=""
+            placeholder="Select a Feeling"
+            class="input-text"
+            >
+            </input>
+
+            <label for="colorpicker"><h4>Put A Color to It: </h4></label>
+            <h6>Select a color that best represents how you are feeling</h6>
+            <input type="color" id="hex_code" value="#0000ff"> 
+
+            <h4>Name the Color</h4>
+            <input
+            type="text"
+            name="name"
+            value=""
+            placeholder="Name Your Color"
+            class="input-text"
+            >
+            </input>
+            
+            <br><br>
+            <input
+            type="submit"
+            name="submit"
+            value="Post Color"
+            class="submit"
+            />
+
+
+            </form>
+          </div>
+
+         <!-- //CREATE BUTTON--> 
+        <div align ="center">
+        <button  id="new-color">Create a Color</button>
+        </div>
+       <br><br>
+        <!-- this is where you will append all of the color stories --> 
+        <div class="grid-styling" id="all-colors">
+
+        </div>
+
+
+        <br> <br>
+    
+    </body>
+
+</html>

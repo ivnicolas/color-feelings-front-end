@@ -1,0 +1,73 @@
+/* @font-face { font-family: Helvetica; src: url('HelveticaNeue-Bold.ttf'); }  */
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}
+
+#title{
+    color: red;
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+    font-size: 100px;
+}
+
+
+body {
+    background-color: rgb(247, 244, 244);
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.4; */
+     
+   }
+   
+   .card {
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 300px;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.315);}
+   .card-footer {
+     width: 200px;
+     height: 80px;
+     background-color: white;
+     display: flex;
+     align-items: center;
+     padding: 0px;
+     @include bottom();
+     bottom: 0;
+     position: absolute;
+     right: 0;
+     left: 0;}
+   .card-title{
+     padding-left: 15px;
+     font-family: "Helvetica Neue";
+     font-weight: bold;
+     font-size: 18px
+   }
+
+   .grid-styling{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+  }
+
+  i.heart-icon {
+    color: red;
+}
