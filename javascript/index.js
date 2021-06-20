@@ -1,5 +1,5 @@
 //Listen for when the DOM is loaded 
-let colorForm = false;
+let colorForm = true;
 
 let test = undefined 
 const url = "http://127.0.0.1:3000/colors"
@@ -9,27 +9,57 @@ document.addEventListener("DOMContentLoaded",function(){
     //what is the first thing that needs to happen 
     // load in the color stories that already exist 
     API.addColor()
+    
+    // Feeling.feelingList()
 
+    // debugger
+    API.populateDropdown()
+    // Feeling.feelingList()
+    Feeling.allFeelings()
 
+//    API.filterButtons()
 
+    API.showForm()
     //**FORM TOGGLE
     // create toggle to display/hide form 
-    const formContainer = document.querySelector(".container");
-    const createColorBtn = document.querySelector("#new-color");
+    // let colorForm = false;
+    // const formContainer = document.querySelector("#form-container");
+    // const createColorBtn = document.querySelector("#new-color");
 
-    createColorBtn.addEventListener("click", () => {
+    // function show() {
+    //     formContainer.style.visibility = "visible";
+    // }
 
-      //toggle
-      colorForm = !colorForm;
+    // function hide() {
+    //     formContainer.style.visibility = "hidden";
+    // }
 
-      // Initially colorForm === false
-      if (colorForm) {
-        formContainer.style.display = "block";
-      } else {
-        formContainer.style.display = "none";
-      }
+    // function toggle() {
+    //     if (formContainer.style.visibility === "hidden") {
+    //         show();
+    //     } else {
+    //         hide();
+    //     }
+    // }
 
-    });
+    // hide();
+
+    // createColorBtn.addEventListener("click", toggle, false);
+
+
+    // createColorBtn.addEventListener("click", () => {
+
+    //   //toggle
+    //   colorForm = !colorForm;
+
+    //   // Initially colorForm === false
+    //   if (colorForm) {
+    //     formContainer.style.display = "block";
+    //   } else {
+    //     formContainer.style.display = "none";
+    //   }
+
+    // });
 
 // END FORM 
 
@@ -39,8 +69,9 @@ document.addEventListener("DOMContentLoaded",function(){
     const newColor = document.querySelector(".add-color")
 
     newColor.addEventListener("submit", event =>{ event.preventDefault();
-    
-        const feeling = event.target.feeiling.value 
+        
+        debugger
+        const feeling = event.target.feeling.value
         const hex_code = event.target.hex_code.value
         const name = event.target.name.value 
       
@@ -71,6 +102,11 @@ document.addEventListener("DOMContentLoaded",function(){
     })
 
     //END OF NEW POSTING
+
+
+    //FILTER BUTTONS
+
+    //END OF FILTER BUTTONS 
 
 
 })

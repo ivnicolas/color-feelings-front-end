@@ -17,19 +17,22 @@
         <!--TITLE-->
         <h1  id="title" style="text-align:center"> COLOR YOUR FEELINGS</h1>
 
+         <!-- //CREATE COLOR BUTTON--> 
+         <div align ="center">
+            <button  id="new-color">Create a Color</button>
+            </div>
+            <br><br>
+
+            
         <!--//FORM -->
-        <div class="container">
+        <div id="form-container">
             <form class="add-color">
               
+              
             <h4>How Are You Feeling?</h4>
-            <input
-            type="text"
-            name="feeling"
-            value=""
-            placeholder="Select a Feeling"
-            class="input-text"
-            >
-            </input>
+            <select id="feeling">
+                <option>Select A Feeling</option>
+              </select>
 
             <label for="colorpicker"><h4>Put A Color to It: </h4></label>
             <h6>Select a color that best represents how you are feeling</h6>
@@ -57,10 +60,16 @@
             </form>
           </div>
 
-         <!-- //CREATE BUTTON--> 
-        <div align ="center">
-        <button  id="new-color">Create a Color</button>
+
+        <!--filter button -->
+        <div id="filter-buttons">
+            <!-- <h4>Shades of...</h4>
+            <button id="1">Anger</button><button>Nostalgia</button><button>Joy</button><button>Hope</button><button>Sadness</button><button>Bliss</button><button>Frustration</button><button>Confusion</button>
+         -->
         </div>
+       <!--filter button end -->
+
+
        <br><br>
         <!-- this is where you will append all of the color stories --> 
         <div class="grid-styling" id="all-colors">
