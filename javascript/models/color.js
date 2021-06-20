@@ -11,11 +11,9 @@ class Color{
        
     }
    
-    //render method that creates div, append it to page, 
     renderColor(){
         const colorHolder = document.getElementById("all-colors")
         const colorContainer = document.createElement("div")
-
 
         //explain this tidbit right here pls 
         //do i need both id's?
@@ -23,22 +21,15 @@ class Color{
         colorContainer.dataset.feeling_id = this.feeling_id
         colorContainer.id = this.id 
         colorContainer.classList.add= "color-card"
-        // colorContainer.style.visibility = "visible"
         colorContainer.innerHTML += this.showHTML()
         colorHolder.appendChild(colorContainer)
 
-        // debugger 
-        colorContainer.addEventListener("click", this.likeMe)
-        // debugger
-
-
-      
+        colorContainer.addEventListener("click", this.likeMe)  
       
     }
 
     showHTML(){
         return `
-
         <div class="card" style="background-color: ${this.hex_code}; display: block">
         <i class="large material-icons heart-icon">favorite</i><p class= "like-count">${this.likes}</p>
             <di class="card-footer">
@@ -47,13 +38,10 @@ class Color{
                 </div>
              </di>
         </div>
-         <br><br>      
-                
-                
+         <br><br>            
                 `
     }
 
-    // WHAT I WANTED TO DO 
     likeMe(e){
         const url = "http://127.0.0.1:3000/colors"
         let likes = parseInt(e.target.parentElement.querySelector(".like-count").innerText)
