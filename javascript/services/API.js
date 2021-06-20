@@ -76,23 +76,69 @@ class API {
 
     }
 
-    static populateDropdown(){
-
-        console.log("testing")
+    //new 
+    static populateDropdown(feelingName){
+       
         const select = document.getElementById("feeling"); 
-        const options =  ["Joyful","Angry","Nostalgic","Hopeful","Sad","Blissful","Frustrated","Confused"]
-      
-        for(let i=0 ; i< options.length; i++){
+        let opt = document.createElement("option")
 
-                    let feeling = options[i]
-                    let opt = document.createElement("option")
-              
-                    opt.text = feeling 
-                    opt.value = feeling 
-                    select.add(opt)
-                }
+        opt.text= feelingName
+        opt.value = feelingName
+        select.add(opt)
+
+        // debugger 
+        console.log("hi")
+        // const options =  ["Joyful","Angry","Nostalgic","Hopeful","Sad","Blissful","Frustrated","Confused"]
+       
+        
+        // for(let i=0 ; i< options.length; i++){
+        //             // console.log(options[i])
+        //             let feeling = options[i]
+        //             let opt = document.createElement("option")
+        //             console.log(options[i])
+        //             opt.text = feeling 
+        //             opt.value = feeling 
+        //             select.add(opt)
+        //         }
     }
 
+    //old
+    // static populateDropdown(){
+
+    //     console.log("testing")
+    //     const select = document.getElementById("feeling"); 
+    //     Feeling.feelingList()
+    //     debugger
+    //     const options =  Feeling.feelingNames
+    //     console.log(Feeling.feelingNames)
+    //     // const options =  ["Joyful","Angry","Nostalgic","Hopeful","Sad","Blissful","Frustrated","Confused"]
+    //     debugger
+    //     this.loop(options)
+    //     // for(let i=0 ; i< options.length; i++){
+    //     //             // console.log(options[i])
+    //     //             let feeling = options[i]
+    //     //             let opt = document.createElement("option")
+    //     //             console.log(options[i])
+    //     //             opt.text = feeling 
+    //     //             opt.value = feeling 
+    //     //             select.add(opt)
+    //     //         }
+    // }
+
+    static loop(options){
+        debugger
+        for(var i = 0 ; i< options.length; i++){
+            console.log(options[i])
+            debugger
+            let feeling = options[i]
+            let opt = document.createElement("option")
+            console.log(options[i])
+            opt.text = feeling 
+            opt.value = feeling 
+            select.add(opt)
+        }
+
+    }
     // static populate_dropdown(){
     //     console.log("we in")
     //     const select = document.getElementById("selectFeeling"); 
@@ -124,9 +170,8 @@ class API {
 
         let url = `http://localhost:3000/feelings/${button.dataset.id}/colors`
         
-        console.log(feeling.name)
         
-        button.addEventListener("click", function(e){
+        button.addEventListener("click", function(){
             API.getColorByFeeling(this.dataset.id,url)
             })
     }

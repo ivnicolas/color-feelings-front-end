@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded",function(){
     //adds an event listener on the submit button for the form and does POST fecth (should i put this inside API.showForm?)
     API.addNewColors()
     API.resetButton()
+    Feeling.feelingList()
 
 
     // Feeling.feelingList()
