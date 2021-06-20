@@ -89,13 +89,16 @@ document.addEventListener("DOMContentLoaded",function(){
         })
         .then(response => response.json())
         .then(newColor => {
-            let color = new Color(
-                newColor.id, 
-                newColor.feeling_id, 
-                newColor.name, 
-                newColor.hex_code, 
-                newColor.likes , 
-            )
+            debugger
+            let color = new Color(newColor)
+            color.renderColor()
+            // let color = new Color(
+            //     newColor.id, 
+            //     newColor.feeling_id, 
+            //     newColor.name, 
+            //     newColor.hex_code, 
+            //     newColor.likes , 
+            // )
             
         })
         event.target.reset()

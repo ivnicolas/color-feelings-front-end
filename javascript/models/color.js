@@ -1,18 +1,20 @@
 class Color{
 
-    constructor(id, feeling_id, name, hex_code, likes){
+    constructor({id,name, hex_code, likes,feeling_id}){
         this.id = id 
-        this.feeling_id = feeling_id
         this.name = name
         this.hex_code = hex_code
         this.likes = likes 
+        this.feeling_id = feeling_id
         
         // render to page 
-        this.renderColor()
+        // this.renderColor()
        
        
     }
-
+    testThis(){
+        return "hello"
+    }
     //render method that creates div, append it to page, 
     renderColor(){
         const colorHolder = document.getElementById("all-colors")

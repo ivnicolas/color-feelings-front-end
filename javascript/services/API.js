@@ -69,9 +69,12 @@ class API {
         .then(resp => resp.json()) //this help to make out responce readable 
         .then(colors => {
                 colors.forEach( color => {
-                const{id, feeling_id, name, hex_code, likes} = color
-                new Color (id, feeling_id, name, hex_code, likes) 
-                    }
+                   const newColor = new Color(color)
+                //    debugger
+                // const{id, feeling_id, name, hex_code, likes} = color
+                // // new Color (id, feeling_id, name, hex_code, likes) 
+                // debugger
+                    newColor.renderColor()}
                 )
             }
         )
@@ -126,24 +129,37 @@ class API {
     
     // }
 
-    static addFilterButtons(feelings){
-        
+    static addFilterButtons(feeling){
+        // debugger
         let select = document.getElementById("filter-buttons")
         let button = document.createElement("button")
 
-        button.innerHTML= `${feelings.name}`
+        
+
+        button.dataset.id = feeling.id 
+        button.id = feeling.id
+        button.innerHTML= `${feeling.name}`
         select.append(button)
+
+        let url = `http://localhost:3000/feelings/${button.dataset.id}`
+        
+    
+        console.log(feeling.name)
+        // button.addEventListener("click", this.getColorByFeeling(url))
+        button.addEventListener("click", function(e){
+           
+            API.getColorByFeeling(url)
+            
+        }
+        )
     }
 
-    // static allFeelings(){
-    //     fetch("http://localhost:3000/feelings")
-    //     .then(res=> res.json())
-    //     .then(totalFeelings => {
-    //         totalFeelings.forEach(function(feeling){
-    //         API.addFilterButtons(feeling);
-    //                                     })
-    //                             })
-    // }
+    static getColorByFeeling(url){
+        
+        console.log(url)
+    }
+
+  
 }
  
 
