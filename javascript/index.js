@@ -8,8 +8,8 @@ const url = "http://127.0.0.1:3000/colors"
 document.addEventListener("DOMContentLoaded",function(){
     //what is the first thing that needs to happen 
     // load in the color stories that already exist 
-    API.addColor()
-    
+    API.addAllColors()
+    API.addNewColors()
     // Feeling.feelingList()
 
     // debugger
@@ -66,43 +66,42 @@ document.addEventListener("DOMContentLoaded",function(){
 
     // POSTING A NEW COLOR STORY 
 
-    const newColor = document.querySelector(".add-color")
+    // const newColor = document.querySelector(".add-color")
 
-    newColor.addEventListener("submit", event =>{ event.preventDefault();
+    // newColor.addEventListener("submit", event =>{ event.preventDefault();
         
-        debugger
-        const feeling = event.target.feeling.value
-        const hex_code = event.target.hex_code.value
-        const name = event.target.name.value 
+    //     // debugger
+    //     const feeling = event.target.feeling.value
+    //     const hex_code = event.target.hex_code.value
+    //     const name = event.target.name.value 
       
-
-         // Can/Should I refactor this to the API)  
-        fetch(url,{
-            method: "POST",
-            headers: { "Content-Type": "application/json"}, //syntax
-            body: JSON.stringify({ 
-                "feeling": feeling,
-                "hex_code": hex_code, 
-                "name": name,
-                "likes": 0
-            })
-        })
-        .then(response => response.json())
-        .then(newColor => {
-            debugger
-            let color = new Color(newColor)
-            color.renderColor()
-            // let color = new Color(
-            //     newColor.id, 
-            //     newColor.feeling_id, 
-            //     newColor.name, 
-            //     newColor.hex_code, 
-            //     newColor.likes , 
-            // )
+        
+    //      // Can/Should I refactor this to the API)  
+    //     fetch(url,{
+    //         method: "POST",
+    //         headers: { "Content-Type": "application/json"}, //syntax
+    //         body: JSON.stringify({ 
+    //             "feeling": feeling,
+    //             "hex_code": hex_code, 
+    //             "name": name,
+    //             "likes": 0
+    //         })
+    //     })
+    //     .then(response => response.json())
+    //     .then(newColor => {
             
-        })
-        event.target.reset()
-    })
+    //         debugger 
+    //         const colorHolder = document.getElementById("all-colors")
+        
+    //         colorHolder.innerHTML="<h4> You Just Created the Color...</h4> "
+    //         let color = new Color(newColor)
+    //         color.renderColor()
+           
+           
+            
+    //     })
+    //     event.target.reset()
+    // })
 
     //END OF NEW POSTING
 

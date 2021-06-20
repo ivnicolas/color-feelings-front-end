@@ -15,24 +15,15 @@ class API {
         function show() {
 
 
-            //TEST
-            // const colorHolder = document.getElementById("form-container")
-            // const form = document.createElement("div")
-            
-            
-            // form.innerHTML = ""
-            // form.innerHTML = '<p> test </p>'
-            // colorHolder.appendChild(form)
-
-            formContainer.style.visibility = "visible";
+            formContainer.style.display = "block";
         }
     
         function hide() {
-            formContainer.style.visibility = "hidden";
+            formContainer.style.display = "none";
         }
     
         function toggle() {
-            if (formContainer.style.visibility === "hidden") {
+            if (formContainer.style.display === "none") {
                 show();
             } else {
                 hide();
@@ -61,7 +52,7 @@ class API {
         // });
      }
 
-     static addColor(){
+     static addAllColors(){
 
         const url = "http://127.0.0.1:3000/colors"
 
@@ -70,16 +61,52 @@ class API {
         .then(colors => {
                 colors.forEach( color => {
                    const newColor = new Color(color)
-                //    debugger
-                // const{id, feeling_id, name, hex_code, likes} = color
-                // // new Color (id, feeling_id, name, hex_code, likes) 
-                // debugger
+               
                     newColor.renderColor()}
                 )
             }
         )
     }
 
+    static addNewColors(){
+        const newColor = document.querySelector(".add-color")
+
+    newColor.addEventListener("submit", event =>{ event.preventDefault();
+        
+        // debugger
+        const feeling = event.target.feeling.value
+        const hex_code = event.target.hex_code.value
+        const name = event.target.name.value 
+      
+        
+         // Can/Should I refactor this to the API)  
+        fetch(url,{
+            method: "POST",
+            headers: { "Content-Type": "application/json"}, //syntax
+            body: JSON.stringify({ 
+                "feeling": feeling,
+                "hex_code": hex_code, 
+                "name": name,
+                "likes": 0
+            })
+        })
+        .then(response => response.json())
+        .then(newColor => {
+            
+            debugger 
+            const colorHolder = document.getElementById("all-colors")
+        
+            colorHolder.innerHTML="<h4> You Just Created the Color...</h4> "
+            let color = new Color(newColor)
+            color.renderColor()
+           
+           
+            
+        })
+        event.target.reset()
+    })
+
+    }
     static populateDropdown(){
         console.log("testing")
         const select = document.getElementById("feeling"); 
@@ -102,14 +129,14 @@ class API {
        
     }
 
-    static filterButtons(){
-        const allFeelings = document.querySelector("#filter-buttons")
+    // static filterButtons(){
+    //     const allFeelings = document.querySelector("#filter-buttons")
 
-        allFeelings.addEventListener("click", function(e){
-            console.log(e.target.id)
+    //     allFeelings.addEventListener("click", function(e){
+    //         console.log(e.target.id)
 
-        })
-    }
+    //     })
+    // }
     // static populate_dropdown(){
     //     console.log("we in")
     //     const select = document.getElementById("selectFeeling"); 
@@ -130,33 +157,62 @@ class API {
     // }
 
     static addFilterButtons(feeling){
-        // debugger
+
         let select = document.getElementById("filter-buttons")
         let button = document.createElement("button")
-
-        
 
         button.dataset.id = feeling.id 
         button.id = feeling.id
         button.innerHTML= `${feeling.name}`
         select.append(button)
 
-        let url = `http://localhost:3000/feelings/${button.dataset.id}`
+        let url = `http://localhost:3000/feelings/${button.dataset.id}/colors`
         
-    
         console.log(feeling.name)
-        // button.addEventListener("click", this.getColorByFeeling(url))
+        
         button.addEventListener("click", function(e){
-           
-            API.getColorByFeeling(url)
-            
-        }
-        )
+            API.getColorByFeeling(this.dataset.id,url)
+            })
     }
 
-    static getColorByFeeling(url){
+    static getColorByFeeling(btnID,btnURL){
+        //you want to get the id of the button that clicked 
+        console.log(btnID)
+        console.log(btnURL)
+
+        const colorHolder = document.getElementById("all-colors")
         
-        console.log(url)
+        colorHolder.innerHTML=" "
+
+        fetch(btnURL)
+        .then(resp => resp.json()) //this help to make out responce readable 
+        .then(colors => {
+                colors.forEach( color => {
+                   const newColor = new Color(color)
+                    newColor.renderColor()}
+                )
+            }
+        )
+
+
+
+
+
+
+
+   
+        // //iterate through all of the cards on the page 
+        // const allCards = Array.from(document.querySelectorAll(".card"))
+        // // if their parent element has a feeling id that matches the the id of the buttonn that was clicked, set display to block
+        // //else have display be none 
+        // allCards.map(card => {
+        //     if(card.parentElement.dataset.feeling_id == btnID){
+        //         card.style.display = "block"
+        //     }
+        //     else{
+        //         card.style.display = "none"
+        //     }
+        // })   
     }
 
   

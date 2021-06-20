@@ -14,12 +14,10 @@ class Feeling{
             
             
             ) })
-        // .then(something => console.log(something))
-        // debugger
+       
         console.log(feelingNames)
         return feelingNames
-        
-    //    console.log("hi")
+
     }
 
     static allFeelings(){

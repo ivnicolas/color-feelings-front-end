@@ -7,14 +7,10 @@ class Color{
         this.likes = likes 
         this.feeling_id = feeling_id
         
-        // render to page 
-        // this.renderColor()
        
        
     }
-    testThis(){
-        return "hello"
-    }
+   
     //render method that creates div, append it to page, 
     renderColor(){
         const colorHolder = document.getElementById("all-colors")
@@ -22,12 +18,16 @@ class Color{
 
 
         //explain this tidbit right here pls 
+        //do i need both id's?
         colorContainer.dataset.id = this.id 
+        colorContainer.dataset.feeling_id = this.feeling_id
         colorContainer.id = this.id 
         colorContainer.classList.add= "color-card"
+        // colorContainer.style.visibility = "visible"
         colorContainer.innerHTML += this.showHTML()
         colorHolder.appendChild(colorContainer)
 
+        // debugger 
         colorContainer.addEventListener("click", this.likeMe)
         // debugger
 
@@ -39,7 +39,7 @@ class Color{
     showHTML(){
         return `
 
-        <div class="card" style="background-color: ${this.hex_code}">
+        <div class="card" style="background-color: ${this.hex_code}; display: block">
         <i class="large material-icons heart-icon">favorite</i><p class= "like-count">${this.likes}</p>
             <di class="card-footer">
                 <div>
