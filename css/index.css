@@ -20,9 +20,9 @@
 body {
     background-color: rgb(247, 244, 244);
     /* display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    justify-content: center; */
+    
+    /* min-height: 100vh;
     line-height: 1.4; */
      
    }
@@ -76,6 +76,8 @@ body {
 #form-container{
 	max-width: 650px;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 #form-container label{
 	display:block;
