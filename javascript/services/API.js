@@ -76,7 +76,6 @@ class API {
 
     }
 
-    //new 
     static populateDropdown(feelingName){
        
         const select = document.getElementById("feeling"); 
@@ -85,78 +84,8 @@ class API {
         opt.text= feelingName
         opt.value = feelingName
         select.add(opt)
-
-        // debugger 
-        console.log("hi")
-        // const options =  ["Joyful","Angry","Nostalgic","Hopeful","Sad","Blissful","Frustrated","Confused"]
        
-        
-        // for(let i=0 ; i< options.length; i++){
-        //             // console.log(options[i])
-        //             let feeling = options[i]
-        //             let opt = document.createElement("option")
-        //             console.log(options[i])
-        //             opt.text = feeling 
-        //             opt.value = feeling 
-        //             select.add(opt)
-        //         }
     }
-
-    //old
-    // static populateDropdown(){
-
-    //     console.log("testing")
-    //     const select = document.getElementById("feeling"); 
-    //     Feeling.feelingList()
-    //     debugger
-    //     const options =  Feeling.feelingNames
-    //     console.log(Feeling.feelingNames)
-    //     // const options =  ["Joyful","Angry","Nostalgic","Hopeful","Sad","Blissful","Frustrated","Confused"]
-    //     debugger
-    //     this.loop(options)
-    //     // for(let i=0 ; i< options.length; i++){
-    //     //             // console.log(options[i])
-    //     //             let feeling = options[i]
-    //     //             let opt = document.createElement("option")
-    //     //             console.log(options[i])
-    //     //             opt.text = feeling 
-    //     //             opt.value = feeling 
-    //     //             select.add(opt)
-    //     //         }
-    // }
-
-    static loop(options){
-        debugger
-        for(var i = 0 ; i< options.length; i++){
-            console.log(options[i])
-            debugger
-            let feeling = options[i]
-            let opt = document.createElement("option")
-            console.log(options[i])
-            opt.text = feeling 
-            opt.value = feeling 
-            select.add(opt)
-        }
-
-    }
-    // static populate_dropdown(){
-    //     console.log("we in")
-    //     const select = document.getElementById("selectFeeling"); 
-    //     debugger
-    //     const options = Feeling.feelings_list();
-    //      debugger 
-    //     for(let i=0 ; i< options.length; i++){
-    //         let feeling = options[i]
-
-    //         let opt = document.createElement("option")
-    //         // debugger
-    //         opt.text = feeling 
-    //         opt.value = feeling 
-
-    //         select.add(opt)
-    //     }
-    
-    // }
 
     static addFilterButtons(feeling){
 
@@ -194,26 +123,7 @@ class API {
                 )
             }
         )
-
-
-
-
-
-
-
-   
-        // //iterate through all of the cards on the page 
-        // const allCards = Array.from(document.querySelectorAll(".card"))
-        // // if their parent element has a feeling id that matches the the id of the buttonn that was clicked, set display to block
-        // //else have display be none 
-        // allCards.map(card => {
-        //     if(card.parentElement.dataset.feeling_id == btnID){
-        //         card.style.display = "block"
-        //     }
-        //     else{
-        //         card.style.display = "none"
-        //     }
-        // })   
+ 
     }
 
     static resetButton(){
