@@ -74,7 +74,7 @@ body {
 
 
 #form-container{
-	max-width: 450px;
+	max-width: 650px;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 #form-container label{
@@ -129,6 +129,7 @@ body {
 #form-container input[type=time],
 #form-container input[type=url],
 #form-container input[type=email],
+#form-container input[type=color],
 #form-container select, 
 #form-container textarea{
 	border-radius: 3px;
@@ -158,4 +159,9 @@ body {
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;	
 	font-weight: bold;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #F072A9;
+  opacity: 1; /* Firefox */
 }

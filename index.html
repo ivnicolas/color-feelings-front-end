@@ -23,46 +23,37 @@
         <div id="form-container">
             <form class="add-color">
                 <fieldset><legend>New Color</legend>
-            
                     
-            <label>     
-            <span>How Are You Feeling?</span>
-            <select class="select-field" id="feeling">
-                <option>Select A Feeling</option>
-              </select>
-            </label>  
+                <label>     
+                    <span>How Are You Feeling?</span>
+                    <select class="select-field" id="feeling">
+                    <option>Select A Feeling</option>
+                    </select>
+                </label>  
 
+                <label for="colorpicker">
+                    <span>Select a Color that Matches Your Feeling:</span>
+                    <input type="color" id="hex_code" value="#0000ff"><h6 style="color:#F072A9"></h6></input>
+                </label> 
 
-            <label for="colorpicker"><h4>Put A Color to It: </h4></label>
-            <h6>Select a color that best represents how you are feeling</h6>
-            <input type="color" id="hex_code" value="#0000ff"> 
-
-            <h4>Name the Color</h4>
-            <input
-            type="text"
-            name="name"
-            value=""
-            placeholder="Name Your Color"
-            class="input-text"
-            >
-            </input>
-            
-            <br><br>
-            <input
-            type="submit"
-            name="submit"
-            value="Post Color"
-            class="submit"
-            />
-
+                <label>
+                    <span>Name the Color</span>
+                    <input type="text" name="name" value="" placeholder="Name Your Color" class="input-text">
+                </label>
+                <br>
+                <label>
+                    <span> </span>
+                    <input type="submit" name="submit" value="Post Color" class="submit"/>
+                </label>  
+                  
                 </fieldset>
             </form>
-          </div>
+        </div>
 
              <!-- //CREATE COLOR BUTTON--> 
          <div align ="center">
             <button  id="new-color">Create a Color</button>
-            </div>
+         </div>
             <br><br>
 
 
