@@ -20,10 +20,4 @@ document.addEventListener("DOMContentLoaded",function(){
     API.resetButton()
     
 
-
-    
-    
-  
-
-
 })

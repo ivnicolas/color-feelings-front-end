@@ -17,22 +17,21 @@
         <!--TITLE-->
         <h1  id="title" style="text-align:center"> COLOR YOUR FEELINGS</h1>
 
-         <!-- //CREATE COLOR BUTTON--> 
-         <div align ="center">
-            <button  id="new-color">Create a Color</button>
-            </div>
-            <br><br>
-
+      
             
         <!--//FORM -->
         <div id="form-container">
             <form class="add-color">
-              
-              
-            <h4>How Are You Feeling?</h4>
-            <select id="feeling">
+                <fieldset><legend>New Color</legend>
+            
+                    
+            <label>     
+            <span>How Are You Feeling?</span>
+            <select class="select-field" id="feeling">
                 <option>Select A Feeling</option>
               </select>
+            </label>  
+
 
             <label for="colorpicker"><h4>Put A Color to It: </h4></label>
             <h6>Select a color that best represents how you are feeling</h6>
@@ -56,9 +55,15 @@
             class="submit"
             />
 
-
+                </fieldset>
             </form>
           </div>
+
+             <!-- //CREATE COLOR BUTTON--> 
+         <div align ="center">
+            <button  id="new-color">Create a Color</button>
+            </div>
+            <br><br>
 
 
         <!--filter button -->

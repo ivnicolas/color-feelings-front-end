@@ -1,6 +1,5 @@
 class Feeling{
 
-
     static allFeelings(){
         fetch("http://localhost:3000/feelings")
         .then(res=> res.json())
