@@ -29,7 +29,7 @@ class Feeling{
         .then(res=> res.json())
         .then(totalFeelings => {
             debugger
-            totalFeelings.forEach(function(feeling){
+            totalFeelings.map(function(feeling){
             API.addFilterButtons(feeling);
             API.populateDropdown(feeling.name)
                                         })

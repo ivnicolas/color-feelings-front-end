@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded",function(){
     //builds form
     API.showForm()
     //populates the dropdown list for form
-    API.populateDropdown()
+    // API.populateDropdown()
     //fetches all the feelings and turns them into buttons 
     Feeling.allFeelings()
     // fetches all the colors from the backend and displays them on the pages
