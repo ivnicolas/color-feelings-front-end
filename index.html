@@ -5,6 +5,7 @@
         <title>COLORS</title>
        
         <link rel="stylesheet" href="css/index.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script type="text/javascript" src="javascript/models/color.js"></script>
         <script type="text/javascript" src="javascript/models/feeling.js"></script>
@@ -15,7 +16,8 @@
 
     <body>
         <!--TITLE-->
-        <h1  id="title" style="text-align:center"> COLOR YOUR FEELINGS</h1>
+     
+        <h1 id="title" style="text-align:center"> COLOR YOUR FEELINGS</h1>
 
       
             
@@ -23,21 +25,21 @@
         <div id="form-container">
             <form  class="add-color">
                 <fieldset><legend>New Color</legend>
-                    
+                <div align ="center">
                 <label>     
-                    <span>How Are You Feeling?</span>
+                    <span style="margin-left: 20px;">How Are You Feeling?</span>
                     <select class="select-field" id="feeling">
                     <option>Select A Feeling</option>
                     </select>
                 </label>  
 
                 <label for="colorpicker">
-                    <span>Select a Color that Matches Your Feeling:</span>
+                    <span style="margin-left: 20px;">Select a Color that Matches Your Feeling:</span>
                     <input type="color" id="hex_code" value="#0000ff"><h6 style="color:#F072A9"></h6></input>
                 </label> 
 
                 <label>
-                    <span>Name the Color</span>
+                    <span style="margin-left: 20px;"> Name the Color</span>
                     <input type="text" name="name" value="" placeholder="Name Your Color" class="input-text">
                 </label>
                 <br>
@@ -45,7 +47,7 @@
                     <span> </span>
                     <input type="submit" name="submit" value="Post Color" class="submit"/>
                 </label>  
-
+                </div>    
                 </fieldset>
             </form>
         </div>
@@ -58,7 +60,7 @@
 
 
         <!--filter button -->
-        <div id="filter-buttons">
+        <div align ="center" id="filter-buttons">
             <!-- <button></button> -->
             <!-- <h4>Shades of...</h4>
             <button id="1">Anger</button><button>Nostalgia</button><button>Joy</button><button>Hope</button><button>Sadness</button><button>Bliss</button><button>Frustration</button><button>Confusion</button>

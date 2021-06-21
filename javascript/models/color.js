@@ -30,8 +30,8 @@ class Color{
 
     showHTML(){
         return `
-        <div class="card" style="background-color: ${this.hex_code}; display: block">
-        <i class="large material-icons heart-icon">favorite</i><p class= "like-count">${this.likes}</p>
+        <div class="card" style="background-color: ${this.hex_code}">
+        <i class="large material-icons heart-icon">favorite</i><span class= "like-count">${this.likes}</span>
             <di class="card-footer">
                 <div>
                     <h2 class="card-title" >${this.name.toUpperCase()}</h2>
