@@ -33,10 +33,12 @@ class Color{
         <div class="card" style="background-color: ${this.hex_code}">
         
             <di class="card-footer">
-                <div>
+                <div id="bottom-card">
                     <h2 class="card-title" >${this.name.toUpperCase()}</h2><br>
+                 
                     <i class="large material-icons heart-icon">favorite</i><span id="${this.id}" class= "like-count"> ${this.likes}</span>   
-                </div>
+                   
+                    </div>
              </di>
         </div>
        

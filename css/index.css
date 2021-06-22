@@ -34,6 +34,7 @@ body {
 }
 
 button{
+
   background-color: #EB3B88;
 	border: 1px solid #C94A81;
 	padding: 5px 15px 5px 15px;
@@ -46,17 +47,18 @@ button{
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;	
 	font-weight: bold;
-  margin: 5px ;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+  margin: 10px ;
+  box-shadow: 0 1px 0 rgb(37, 37, 37), -5px 5px 0 rgb(0, 0, 0,0.6), 0 6px 6px rgba(0,0,0,0.6);
 }
 
 i{
   width: 20px;
   height: 20px;
-  position: relative;
-  top: 5px;
+  position: static;
+  top: -12px;
   margin-right: 10px;
 }
+
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #F072A9;
@@ -103,12 +105,15 @@ i{
     /* border: blue;
     border-style: dotted;
     border-width: 2px; */
+   
     padding: 0%;
     /* top: 50px; */
     display: inline-block;
      font-family: "Helvetica Neue";
      font-weight: bold;
      font-size: 16px}
+
+
    
   .grid-styling{
 
@@ -131,18 +136,25 @@ i{
     font-weight: bold;
     font-size: 16px;
     line-height: 1.6;
+    position: relative;
 
-    /* vertical-align: middle;
-    bottom: 40%; */
-    top: 5px;
-    /* padding-bottom: 10%;
-    padding-left: 10%; */
+    bottom: 5px;
   }
 
 .error-message{
   color:#F072A9;;
 	font-weight:bold;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+#char-length{
+  color:#F072A9;;
+	font-weight:bold;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 10px;
+  position: relative;
+  top: -15%;
+  margin-top: 2px;
+  left: -13%;
 }
 #filter-text{
   margin: 1% ;

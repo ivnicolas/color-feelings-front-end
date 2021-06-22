@@ -61,7 +61,7 @@ class API {
                     const top = document.querySelector("#top-of-form")
                     const error = document.createElement("h5")
                     error.className = "error-message"
-                    error.innerHTML = '&#128151 Make Sure Form is Fully Completed &#128151'
+                    error.innerHTML = '&#128151 Make Sure Form is Fully Completed and Color Name is Within Character Limit! &#128151'
         
                     top.appendChild(error)
                 }
