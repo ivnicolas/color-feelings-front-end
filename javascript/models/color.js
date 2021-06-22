@@ -30,7 +30,7 @@ class Color{
 
     showHTML(){
         return `
-        <di>
+      
         <div class="card" style="background-color: ${this.hex_code}">
         
             <di class="card-footer">
@@ -41,7 +41,7 @@ class Color{
              </di>
            
         </div>
-        </di>    
+       
          <br><br>            
                 `
     }

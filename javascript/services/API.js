@@ -1,5 +1,9 @@
 class API {
 
+    static isBlank(value){      
+        return(value == undefined || value == null || value.trim() == '');
+    }
+    
      static showForm(){
 
         const formContainer = document.querySelector("#form-container");
@@ -49,7 +53,9 @@ class API {
         const feeling = event.target.feeling.value
         const hex_code = event.target.hex_code.value
         const name = event.target.name.value 
-      
+
+        debugger 
+      // if anything is missing then (.blank) create element that says "make sure form is completed" on the form 
         fetch(url,{
             method: "POST",
             headers: { "Content-Type": "application/json"}, //syntax

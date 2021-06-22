@@ -87,14 +87,13 @@ i{
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.315);}
    
   .card-footer {
-  
+  /* it has something to do with footer styling I believe */
      width: 200px;
      height: 80px;
      background-color: white;
      display: flex;
      align-items: center;
      padding: 0px;
-     @include bottom();
      bottom: 0;
      position: absolute;
      right: 0;
@@ -140,9 +139,7 @@ i{
     padding-left: 10%; */
   }
 
-#like{
 
-}
 #filter-text{
   margin: 1% ;
   margin-left: 20%;
