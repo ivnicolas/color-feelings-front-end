@@ -3,7 +3,7 @@ class API {
     static isBlank(value){      
         return(value == undefined || value == null || value.trim() == '');
     }
-    
+
      static showForm(){
 
         const formContainer = document.querySelector("#form-container");
@@ -54,9 +54,29 @@ class API {
         const hex_code = event.target.hex_code.value
         const name = event.target.name.value 
 
-        debugger 
+        if(API.isBlank(name)=== true || feeling === "Select A Feeling" || hex_code === "#000000"){
+                const warning = document.querySelector(".error-message")
+            //IF ERROR MESSAGE EXIST, DO NOTHING. IF NOT, CREATE ONE 
+                if(warning === null){
+                    const top = document.querySelector("#top-of-form")
+                    const error = document.createElement("h5")
+                    error.className = "error-message"
+                    error.innerHTML = '&#128151 Make Sure Form is Fully Completed &#128151'
+        
+                    top.appendChild(error)
+                }
+        }
+        else{
+
+            //REMOVE ERROR MESSAGE IF THERE WAS ONE 
+            const warning = document.querySelector(".error-message")
+
+            if(warning !== null){
+                warning.remove()
+            }
+       
       // if anything is missing then (.blank) create element that says "make sure form is completed" on the form 
-        fetch(url,{
+       fetch(url,{
             method: "POST",
             headers: { "Content-Type": "application/json"}, //syntax
             body: JSON.stringify({ 
@@ -77,7 +97,7 @@ class API {
                 color.renderColor()
             
             })
-
+        }
             event.target.reset()
         })
 

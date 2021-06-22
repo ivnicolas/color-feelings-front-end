@@ -30,7 +30,6 @@ class Color{
 
     showHTML(){
         return `
-      
         <div class="card" style="background-color: ${this.hex_code}">
         
             <di class="card-footer">
@@ -39,7 +38,6 @@ class Color{
                     <i class="large material-icons heart-icon">favorite</i><span id="${this.id}" class= "like-count"> ${this.likes}</span>   
                 </div>
              </di>
-           
         </div>
        
          <br><br>            

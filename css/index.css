@@ -139,7 +139,11 @@ i{
     padding-left: 10%; */
   }
 
-
+.error-message{
+  color:#F072A9;;
+	font-weight:bold;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
 #filter-text{
   margin: 1% ;
   margin-left: 20%;
