@@ -30,22 +30,27 @@ class Color{
 
     showHTML(){
         return `
+        <di>
         <div class="card" style="background-color: ${this.hex_code}">
-        <i class="large material-icons heart-icon">favorite</i><span class= "like-count">${this.likes}</span>
+        
             <di class="card-footer">
                 <div>
-                    <h2 class="card-title" >${this.name.toUpperCase()}</h2>
+                    <h2 class="card-title" >${this.name.toUpperCase()}</h2><br>
+                    <i class="large material-icons heart-icon">favorite</i><span id="${this.id}" class= "like-count"> ${this.likes}</span>   
                 </div>
              </di>
+           
         </div>
+        </di>    
          <br><br>            
                 `
     }
 
     likeMe(e){
         const url = "http://127.0.0.1:3000/colors"
-        let likes = parseInt(e.target.parentElement.querySelector(".like-count").innerText)
-        const postID = e.target.parentElement.parentElement.id
+        let likes = parseInt(e.target.nextElementSibling.innerText)
+
+        const postID = e.target.nextElementSibling.id
 
 
         if(e.target.className == "large material-icons heart-icon"){
@@ -58,7 +63,8 @@ class Color{
               }
     
             const link = `${url}/${postID}`
-    
+            
+           
             fetch (link, {
                 method: "PATCH",
                 headers: {

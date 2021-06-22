@@ -65,6 +65,7 @@ class API {
   
                 const colorHolder = document.getElementById("all-colors")
             
+                colorHolder.classList.add = "new-color-card"
                 colorHolder.innerHTML="<h4> You Just Created the Color...</h4> "
                 let color = new Color(newColor)
                 color.renderColor()

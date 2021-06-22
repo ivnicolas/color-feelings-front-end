@@ -1,5 +1,68 @@
 /* @font-face { font-family: Helvetica; src: url('HelveticaNeue-Bold.ttf'); }  */
 
+
+body {
+  background-color: rgb(184, 243, 235);
+
+  background-image:linear-gradient(currentColor 1px, transparent 1px),
+  linear-gradient(to right, currentColor 1px, transparent 1px);
+  
+  background-size:10px 10px;
+
+
+ }
+
+ h4{
+   text-align: center;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+   color:  #ff1f8f;
+   background-color: #f7f4f4 ;
+   font-weight: bold;
+   font-size: 15px;
+   border: 1px solid #f7f4f4;
+   padding: 5px 15px 5px 15px;
+   box-shadow: inset -1px -1px 3px #f7f4f4;
+   -moz-box-shadow: inset -1px -1px 3px #f7f4f4;
+   -webkit-box-shadow: inset -1px -1px 3px #f7f4f4;
+   border-radius: 3px;
+   border-radius: 3px;
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;	
+   font-weight: bold;
+   margin: 5%
+
+}
+
+button{
+  background-color: #EB3B88;
+	border: 1px solid #C94A81;
+	padding: 5px 15px 5px 15px;
+	color: #FFCBE2;
+	box-shadow: inset -1px -1px 3px #FF62A7;
+	-moz-box-shadow: inset -1px -1px 3px #FF62A7;
+	-webkit-box-shadow: inset -1px -1px 3px #FF62A7;
+	border-radius: 3px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;	
+	font-weight: bold;
+  margin: 5px ;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+}
+
+i{
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 5px;
+  margin-right: 10px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #F072A9;
+  opacity: 1; /* Firefox */
+}
+
 .wrapper {
     text-align: center;
 }
@@ -7,32 +70,11 @@
 .button {
     position: absolute;
     top: 50%;
+    
 }
-
-
-#title{
-  font-family: 'Montserrat', sans-serif;
-  font-size:110px;
-	letter-spacing: 16px;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: white;
-  text-shadow: 
-						8px 8px #ff1f8f,
-						20px 20px #000000;
-}
-
-
-body {
-    background-color: rgb(247, 244, 244);
-     
-   }
    
-   .card {
-    /* border: blue;
-    border-style: dotted;
-    border-radius: 12px;
-    border-width: 2px; */
+  .card {
+    
     border-left: 8px solid white; 
     border-right: 8px solid white; 
     border-top: 8px solid white; /* This creates the border. Replace black with whatever color you want. */
@@ -43,7 +85,8 @@ body {
     height: 300px;
     position: relative;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.315);}
-   .card-footer {
+   
+  .card-footer {
   
      width: 200px;
      height: 80px;
@@ -56,14 +99,19 @@ body {
      position: absolute;
      right: 0;
      left: 0;}
-   .card-title{
-     padding-left: 15px;
+   
+  .card-title{
+    /* border: blue;
+    border-style: dotted;
+    border-width: 2px; */
+    padding: 0%;
+    /* top: 50px; */
+    display: inline-block;
      font-family: "Helvetica Neue";
      font-weight: bold;
-     font-size: 18px
-   }
-
-   .grid-styling{
+     font-size: 16px}
+   
+  .grid-styling{
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -73,13 +121,44 @@ body {
     justify-content: space-evenly;
     justify-items: center;
     align-content: space-evenly;
-    align-items: center;
-  }
+    align-items: center;}
 
   i.heart-icon {
     color: red;
 }
+  .like-count{
+   text-align: left;
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.6;
 
+    /* vertical-align: middle;
+    bottom: 40%; */
+    top: 5px;
+    /* padding-bottom: 10%;
+    padding-left: 10%; */
+  }
+
+#like{
+
+}
+#filter-text{
+  margin: 1% ;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+#title{
+  font-family: 'Montserrat', sans-serif;
+  font-size:110px;
+	letter-spacing: 16px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: rgb(0, 19, 128);
+  text-shadow: 
+						8px 8px #ff1f8f,
+						20px 20px #000000;
+}
 
 #form-container{
 	max-width: 650px;
@@ -177,24 +256,10 @@ body {
 	font-weight: bold;
 }
 
-button{
-  background: #EB3B88;
-	border: 1px solid #C94A81;
-	padding: 5px 15px 5px 15px;
-	color: #FFCBE2;
-	box-shadow: inset -1px -1px 3px #FF62A7;
-	-moz-box-shadow: inset -1px -1px 3px #FF62A7;
-	-webkit-box-shadow: inset -1px -1px 3px #FF62A7;
-	border-radius: 3px;
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;	
-	font-weight: bold;
-  margin:5px
-}
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #F072A9;
-  opacity: 1; /* Firefox */
-}
+
+
+
+
+
 
