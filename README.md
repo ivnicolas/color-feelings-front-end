@@ -1,5 +1,4 @@
-# Color Your Feeling Project
-
+# Color Your Feeling Project(Front-end)
 
 This application seeks to explore the ways people associate different feelings to different colors. Through this app a user will make a selection of a feeling and a color to match. These color cards are displayed on the main page and users can filter through other color cards by associated feelings to see the associations made by others. 
 
