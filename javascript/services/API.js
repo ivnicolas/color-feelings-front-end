@@ -47,6 +47,7 @@ class API {
 
     static addNewColors(){
         const newColor = document.querySelector(".add-color")
+        const url = "http://127.0.0.1:3000/colors"
 
          newColor.addEventListener("submit", event =>{ event.preventDefault();
       
@@ -134,9 +135,6 @@ class API {
 
     static getColorByFeeling(btnID,btnURL){
         
-        console.log(btnID)
-        console.log(btnURL)
-
         const colorHolder = document.getElementById("all-colors")
         
         colorHolder.innerHTML=" "

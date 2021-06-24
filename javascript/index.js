@@ -2,8 +2,6 @@
 let colorForm = true;
 
 let test = undefined 
-const url = "http://127.0.0.1:3000/colors"
-
 
 document.addEventListener("DOMContentLoaded",function(){ 
     //WHAT NEEDS TO HAPPEN WHEN THE DOM LOADS

@@ -8,7 +8,12 @@ class Feeling{
             API.addFilterButtons(feeling);
             API.populateDropdown(feeling.name)
                                         })
+           
                                 })
+
+                              
+
+
     }
     
 
